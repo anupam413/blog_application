@@ -1,0 +1,59 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog Page</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <style>
+        body{background-image: url({% static '/images/main_page.jpg' %}); background-size: cover; text-align: center;
+        overflow: hidden;}
+        section{margin: 25% 30%; padding: 10px 20px;}
+        .row{display: flex; flex-wrap: wrap; margin-right: -15px; margin-left: -15px;}
+        button{height: 60px; width: 100px; background: #ffbf09;}
+        .row-description{width: auto; height: auto; font-family: 'Ubuntu', 'Lucida Grande',
+        'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif; color: gray;}
+        .row-buttons{float: right; height: auto; width: auto;}
+    </style>
+
+</head>
+<body>
+    <section class="container">
+        <div class="container ">
+                <div class="row row-description">
+                    <div class="col-12 col-sm-3 offset-md-4">
+                        <h4>CREATE & SEE AWESOME CONTENT</h4>
+                    </div>
+                </div>
+        </div>
+        <div class="container">
+                <div class="row row-buttons">
+                    <div class="col-12 col-sm-6 align-items-center offset-3">
+                        <button class="btn btn-default mx-md-2 my-1 border rounded" type="button" name="login"><a href="/login-user/">
+                            LOGIN
+                        </a></button>
+                        <button class="btn btn-default mx-md-2 my-1 border rounded" type="button" name="signup"><a href="/signup-new">
+                           SIGNUP
+                        </a></button>
+                    </div>
+                </div>
+                <div class="row row-buttons">
+                    <div class="col-12 col-sm-3 pl-md-5 pt-5 offset-md-3">
+                        <button class="btn btn-default mx-2 my-1 border rounded"
+                                type="button" name="blog-content"><a href="/blog-page/">
+                            BLOGS!!
+                        </a></button>
+                    </div>
+                </div>
+        </div>
+    </section>
+</body>
+</html>

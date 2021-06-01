@@ -1,0 +1,37 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Author</title>
+    <link type="text/css" href="{% static 'css/style.css' %}">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <style>
+        body{background-image: url({% static '/images/author_details.jpg' %}); background-size: cover;
+        margin-left: 400px; margin-top: 160px;}
+        img{height: 250px; width: 5%;}
+        .card-body{background: #dee1e6;}
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <img class="card-img-top" src="{% static 'images/1.jpg' %}" alt="Card image cap"
+             style="width:160px; height:160px; margin-left: -330px;">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <p class="font-bold">{{ user_obj.author_name }}</p>
+              <p class="card-text">{{ user_obj.author_description }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{% load static %}
+
+.navbar-dark{
+    background-color: rgb(7, 3, 3);
+}
+
+body{
+    padding: 50px 0px 0px 0px;
+    z-index: 0;
+    background-image: url("./static/images/blog_page.jpg");
+}

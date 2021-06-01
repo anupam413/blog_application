@@ -1,0 +1,52 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <style>
+        body{background-image: url({% static '/images/reg.jpg' %}); background-size: cover;}
+        #cover {background: #222 center no-repeat;
+            background-size: cover; height: 100%; text-align: center; display: flex; align-items: center;
+            position: relative;}
+        #cover-caption {width: 100%; position: relative; z-index: 1;}
+    </style>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <section id="cover cover-caption" class="min-vh-100">
+        <div class="container">
+            <div class="row text-gray">
+                <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
+                    <h1 class="display-4 py-2 text-truncate">LOGIN</h1><h5>for authors only</h5>
+                    <div class="px-2">
+                        <form action="" class="justify-content-center">
+
+                            {% csrf_token %}
+
+                            <div class="form-group">
+                                <label class="sr-only">USERNAME</label>
+                                <input type="text" class="form-control rounded" placeholder="Username">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only">Password</label>
+                                <input type="password" class="form-control rounded" placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn btn-info btn-lg">LOGIN</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
